@@ -1,0 +1,128 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #ededed;
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Los elementos se envuelven en varias líneas si no hay suficiente espacio */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    gap: 10px; /* Espacio entre los elementos */
+    text-align: center;
+    width: 100%;
+}
+
+.description {
+    flex: 1 1 45%; /* Los elementos ocuparán el 50% del ancho menos el espacio entre ellos */
+    padding: 15px;
+    background-color: #c0c0c0;
+    border-radius: 20px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    height: min-content;
+    margin: 0 auto;
+    min-width: 150px;
+}
+
+.description img {
+    margin: auto;
+    max-width: 100%; /* Asegura que la imagen nunca exceda el tamaño del contenedor */
+    height: auto;
+    display: block;
+}
+
+
+.description .description-text {
+    display: none; /* Oculta el párrafo por defecto */
+    transition: 5s ease; /* Suaviza la transición de visibilidad */
+}
+
+.description:hover .description-text {
+    max-width: auto;
+    display: block; /* Muestra el párrafo al hacer hover */
+    transition: 5s ease;
+    opacity: 1; /* Asegura que el párrafo sea completamente visible */
+}
+
+
+
+section{
+    background-color: #c0c0c0;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    width: 900px;
+    height: 430px;
+    margin-left: auto;
+    margin-right: auto
+  }
+  section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+  }
+  section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+  
+  
+
+.social-media-section {
+    background-color: #c0c0c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+.social-media-icons img {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    margin: 0 6px; /* Añade espacio horizontal entre los enlaces */
+    display: inline-block; /* Asegura que los enlaces se comporten correctamente */
+}
+
+.copy {
+    background-color: #c0c0c0;
+    text-align: center;
+    padding: 5px;
+}
+
+#qrcode {
+    padding: 15px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente (si el contenedor tiene altura) */
+    margin: 0 auto;          /* Centra el elemento si no quieres usar Flexbox */
+    width: 128px;            /* Ancho del div (ajustado al tamaño del QR) */
+    height: 128px;           /* Altura del div (ajustado al tamaño del QR) */
+}
+
+h2{
+    text-align: center;
+}
+
+@import url('https://fonts.cdnfonts.com/css/new-gothic-style');
+
+                
+.logo {
+    text-align: center;
+    font-family: 'CantaraGotica', sans-serif;
+    font-size: 50px; 
+    background: #202020; 
+    -webkit-background-clip: text; 
+    -moz-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
+    text-shadow: 4px 4px 4px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+}
