@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DASER TATTOO</title>
     <link rel="stylesheet" href="style daser prueba.css">
+    <script src="daserjs.js"></script>
     <script src="qrcode.min.js"></script>
     <link href="https://fonts.cdnfonts.com/css/cantara-gotica" rel="stylesheet">
     <div class="logo">DASER TATTOO</div>
@@ -24,8 +25,15 @@
                     <h3>Megan Fox</h3>
                     <p class="description-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quisquam ex, ducimus aut tempora quaerat in repudiandae ullam at commodi, consequatur maxime fuga libero animi officia, officiis aliquam molestias a?</p>
                 </div>
-            <br>
-            <section class="jobs">
+            <section class="jobs">                               
+                <img id="image1" src="https://drive.google.com/thumbnail?sz=w1000&id=18TG9_FApuRxRHkxNkEkMEuq2_I2UlstT">
+                <img id="image2" src="https://drive.google.com/thumbnail?sz=w1000&id=1RqDckGYaj3Koz67F-4gqYHPzokZepAZv">
+                <img id="image3" src="https://drive.google.com/thumbnail?sz=w1000&id=1wNkaIhFenS9R-TCcVoDalT1hjXQhFVv6">
+                <img id="image4" src="https://drive.google.com/thumbnail?sz=w1000&id=1pBNk9hd7zsFmTXsF1eExyCJXhmPJdiNv">
+                <img id="image5" src="https://drive.google.com/thumbnail?sz=w1000&id=1H7curuTSGuCTk7GFA4JqxPYQM8nYV69e">
+                <img id="image6" src="https://drive.google.com/thumbnail?sz=w1000&id=1eMb72xM5deO0iAW5zmZL4vVvOdTNCUqF">
+            </section>
+            <section class="jobs">                               
                 <img src="ico/t1.png">
                 <img src="ico/t2.png">
                 <img src="ico/t3.png">
@@ -33,7 +41,6 @@
                 <img src="ico/t5.png">
                 <img src="ico/t6.png">
             </section>
-
         </div>
         
 
@@ -59,5 +66,14 @@
             <p>&copy; 2024 <b>Nicolás Cabrera</b> - Todos los Derechos Reservados.</p>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('.jobs img');
+        images.forEach(image => {
+            const separator = image.src.includes('?') ? '&' : '?';
+            image.src = image.src + separator + 't=' + new Date().getTime();
+        });
+    });
+    </script>
 </body>
 </html>
