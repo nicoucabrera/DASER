@@ -18,25 +18,30 @@ body {
 }
 
 .description {
-    flex: 1 1 45%; /* Los elementos ocuparán el 50% del ancho menos el espacio entre ellos */
-    padding: 15px;
-    background-color: #535353;
-    border-radius: 20px;
+    flex: 1 1 35%; /* Los elementos ocuparán el 50% del ancho menos el espacio entre ellos */
+    padding: 8px;
+    border-radius: 25px;
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
     height: min-content;
     margin: 0 auto;
     min-width: 150px;
 }
 
+.description:hover, .description:focus, .description:active {
+    box-shadow: 0 0 35px rgba(255, 2, 2, 0.911);
+  }
+  
 .description img {
     margin: auto;
     max-width: 100%; /* Asegura que la imagen nunca exceda el tamaño del contenedor */
     height: auto;
     display: block;
+    border-radius: 15px;
 }
 
 
 .description .description-text {
+    color: #fff;
     display: none; /* Oculta el párrafo por defecto */
     transition: 5s ease; /* Suaviza la transición de visibilidad */
 }
@@ -51,15 +56,19 @@ body {
 
 
 section{
-    background-color: #535353;
     padding: 20px;
     border-radius: 20px;
     display: flex;
-    width: 900px;
+    width: auto;
+    max-width: 900px;
     height: 430px;
     margin-left: auto;
     margin-right: auto
   }
+section:hover {
+    box-shadow: 0 0 35px rgba(255, 2, 2, 0.911);
+}
+  
   section img{
     width: 0px;
     flex-grow: 1;
@@ -77,7 +86,7 @@ section{
   
 
 .social-media-section {
-    background-color: #535353;
+    background-color: #a1a1a1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,7 +102,7 @@ section{
 }
 
 .copy {
-    background-color: #535353;
+    background-color: #a1a1a1;
     text-align: center;
     padding: 5px;
 }
@@ -104,18 +113,17 @@ section{
     justify-content: center; /* Centra horizontalmente */
     align-items: center;     /* Centra verticalmente (si el contenedor tiene altura) */
     margin: 0 auto;          /* Centra el elemento si no quieres usar Flexbox */
-    width: 128px;            /* Ancho del div (ajustado al tamaño del QR) */
-    height: 128px;           /* Altura del div (ajustado al tamaño del QR) */
-    background-color: #535353;
-    padding: 20px;
+    width: 168px;            /* Ancho del div (ajustado al tamaño del QR) */
+    height: 168px;           /* Altura del div (ajustado al tamaño del QR) */
+    background-color: #a1a1a1;
+    padding: 10px;
     border-radius: 20px;
 }
 
-h2{
+h2, h3{
     text-align: center;
     color: #fff
 }
-
 
 
 @import url('https://fonts.cdnfonts.com/css/new-gothic-style');
@@ -125,10 +133,9 @@ h2{
     text-align: center;
     font-family: 'CantaraGotica', sans-serif;
     font-size: 50px; 
-    background: #c7c7c7; 
-    -webkit-background-clip: text; 
-    -moz-background-clip: text; 
+    background: #f30101; 
     background-clip: text; 
-    color: transparent; 
-    text-shadow: 4px 4px 4px #fff(255, 254, 254, 0.4),0px -1px 1px #fff(0,0,0,0.3);
+    color: #a1a1a1;
+    text-shadow: 5px 2px 5px rgb(255, 0, 0); /* Sombra negra suave */
 }
+

@@ -10,45 +10,37 @@
     <link href="https://fonts.cdnfonts.com/css/cantara-gotica" rel="stylesheet">
     <div class="logo">DASER TATTOO</div>
 </head>
+<br>
 <body>
     <header>
     </header>
     <div class="container">
-        <div class="container2"></div>
-                <div class="description">
-                    <img src="ico/DASER.png" alt="Daser" class="tatuador1">
-                    <h3>Damian Cerpa</h3>
-                    <p class="description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum corrupti magni accusamus aliquam, odio amet? Laborum inventore animi repellat. Veritatis doloremque debitis fuga quibusdam perferendis totam cupiditat</p>
-                </div>
-                <div class="description">
-                    <img src="ico/megan.png" alt="tatuadora" class="tatuador2">
-                    <h3>Megan Fox</h3>
-                    <p class="description-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quisquam ex, ducimus aut tempora quaerat in repudiandae ullam at commodi, consequatur maxime fuga libero animi officia, officiis aliquam molestias a?</p>
-                </div>
-            <section class="jobs">                               
-                <img id="image1" src="https://drive.google.com/thumbnail?sz=w1000&id=18TG9_FApuRxRHkxNkEkMEuq2_I2UlstT">
-                <img id="image2" src="https://drive.google.com/thumbnail?sz=w1000&id=1RqDckGYaj3Koz67F-4gqYHPzokZepAZv">
-                <img id="image3" src="https://drive.google.com/thumbnail?sz=w1000&id=1wNkaIhFenS9R-TCcVoDalT1hjXQhFVv6">
-                <img id="image4" src="https://drive.google.com/thumbnail?sz=w1000&id=1pBNk9hd7zsFmTXsF1eExyCJXhmPJdiNv">
-                <img id="image5" src="https://drive.google.com/thumbnail?sz=w1000&id=1H7curuTSGuCTk7GFA4JqxPYQM8nYV69e">
-                <img id="image6" src="https://drive.google.com/thumbnail?sz=w1000&id=1eMb72xM5deO0iAW5zmZL4vVvOdTNCUqF">
-            </section>
-            <section class="jobs">                               
-                <img src="ico/t1.png">
-                <img src="ico/t2.png">
-                <img src="ico/t3.png">
-                <img src="ico/t4.png">
-                <img src="ico/t5.png">
-                <img src="ico/t6.png">
-            </section>
+        <div class="description">
+            <img src="ico/DASER.png" alt="Daser" class="tatuador1">
+            <h3>Damian Cerpa</h3>
+            <p class="description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum corrupti magni accusamus aliquam, odio amet? Laborum inventore animi repellat. Veritatis doloremque debitis fuga quibusdam perferendis totam cupiditat</p>
         </div>
-        
-
+        <div class="description">
+            <img src="ico/megan.png" alt="tatuadora" class="tatuador2">
+            <h3>Megan Fox</h3>
+            <p class="description-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quisquam ex, ducimus aut tempora quaerat in repudiandae ullam at commodi, consequatur maxime fuga libero animi officia, officiis aliquam molestias a?</p>
+        </div>
+    </div>
+    <br>
+    <section class="jobs">                               
+        <img src="ico/t1.png">
+        <img src="ico/t2.png">
+        <img src="ico/t3.png">
+        <img src="ico/t4.png">
+        <img src="ico/t5.png">
+        <img src="ico/t6.png">
+    </section>
+    <br>
         <div class="social-media-section">
             <h3>Siguenos en redes!</h3>
             <div class="social-media-icons">
                 <a href="https://www.instagram.com/dasertattoo/" target="_blank">
-                    <img src="ico/insta.jpg" alt="Instagram"/></a>
+                    <img src="ico/instagram_2111463.png" alt="Instagram"/></a>
             </div>
         </div>
         <h2>Captura el QR para tener nuestra pagina siempre contigo!</h2>
@@ -57,23 +49,13 @@
         <script>
             var qrcode = new QRCode(document.getElementById("qrcode"), {
                 text: "https://nicoucabrera.github.io/DASER/", // Cambia este enlace a la URL que quieras
-                width: 128, // Ancho del QR
-                height: 128, // Alto del QR
+                width: 168, // Ancho del QR
+                height: 168, // Alto del QR
             });
         </script>
         <h3></h3>
         <div class="copy">
             <p>&copy; 2024 <b>Nicolás Cabrera</b> - Todos los Derechos Reservados.</p>
         </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-        const images = document.querySelectorAll('.jobs img');
-        images.forEach(image => {
-            const separator = image.src.includes('?') ? '&' : '?';
-            image.src = image.src + separator + 't=' + new Date().getTime();
-        });
-    });
-    </script>
 </body>
 </html>
