@@ -6,57 +6,81 @@ body {
     background-color: #000000;
 }
 
-
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 35px; 
+    width: 80%; 
+    margin: auto;
+}
 
 .container {
     display: flex;
-    flex-wrap: wrap; /* Los elementos se envuelven en varias líneas si no hay suficiente espacio */
-    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
-    gap: 10px; /* Espacio entre los elementos */
-    text-align: center;
-    width: 100%;
-}
-
-.description {
-    flex: 1 1 35%; /* Los elementos ocuparán el 50% del ancho menos el espacio entre ellos */
-    padding: 8px;
-    border-radius: 25px;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-    height: min-content;
-    margin: 0 auto;
-    min-width: 150px;
-}
-
-.description:hover, .description:focus, .description:active {
-    box-shadow: 0 0 35px rgba(255, 2, 2, 0.911);
-  }
-  
-.description img {
-    margin: auto;
-    max-width: 100%; /* Asegura que la imagen nunca exceda el tamaño del contenedor */
-    height: auto;
-    display: block;
+    flex-direction: column;
+    flex: 1 1 45%; 
+    position: relative;
+    overflow: hidden;
+    transition: all .5s;
+    min-width: 300px; 
     border-radius: 15px;
 }
 
-
-.description .description-text {
-    color: #fff;
-    display: none; /* Oculta el párrafo por defecto */
-    transition: 5s ease; /* Suaviza la transición de visibilidad */
+.container:hover {
+    box-shadow: 0 0 35px rgba(255, 2, 2, 0.911);
 }
 
-.description:hover .description-text {
-    max-width: auto;
-    display: block; /* Muestra el párrafo al hacer hover */
-    transition: 5s ease;
-    opacity: 1; /* Asegura que el párrafo sea completamente visible */
+.container img {
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    transition: all .5s;
+}
+
+.container:hover img {
+    transform: scale(1.09);
+}
+
+.container .info {
+    background: rgba(0, 0, 0, .7);
+    color: #dadada;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    text-align: center;
+    height: 100%;
+    width: auto;
+    box-sizing: border-box;
+    transition: top 0.5s ease;
+    display: none;
+}
+
+.info h3 {
+    text-align: center;
+    color: #dadada;
+    font-size: 18px;
+    margin: 20px 0;
+    border-bottom: 1px solid #dadada;
+    padding-bottom: 10px;
+}
+
+.info p {
+    margin: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #dadada;
+    padding-bottom: 10px;
+}
+
+.container:hover .info {
+    top: 0;
+    display: block;
 }
 
 
 
 section{
     padding: 20px;
+    background-color: #dadada;
     border-radius: 20px;
     display: flex;
     width: auto;
@@ -86,7 +110,7 @@ section:hover {
   
 
 .social-media-section {
-    background-color: #a1a1a1;
+    background-color: #dadada;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,12 +121,12 @@ section:hover {
     width: 50px;
     height: 50px;
     border-radius: 20px;
-    margin: 0 6px; /* Añade espacio horizontal entre los enlaces */
-    display: inline-block; /* Asegura que los enlaces se comporten correctamente */
+    margin: 0 6px; 
+    display: inline-block; 
 }
 
 .copy {
-    background-color: #a1a1a1;
+    background-color: #dadada;
     text-align: center;
     padding: 5px;
 }
@@ -110,19 +134,21 @@ section:hover {
 #qrcode {
     padding: 15px;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente (si el contenedor tiene altura) */
-    margin: 0 auto;          /* Centra el elemento si no quieres usar Flexbox */
-    width: 168px;            /* Ancho del div (ajustado al tamaño del QR) */
-    height: 168px;           /* Altura del div (ajustado al tamaño del QR) */
-    background-color: #a1a1a1;
+    justify-content: center; 
+    align-items: center;     
+    margin: 0 auto;          
+    width: 168px;            
+    height: 168px; 
+    background-color: #dadada;
     padding: 10px;
     border-radius: 20px;
+    box-shadow: 0 0 35px rgba(255, 2, 2, 0.911);
 }
 
-h2, h3{
+h2{
+    font-size: 18px;
     text-align: center;
-    color: #fff
+    color: #dadada
 }
 
 
@@ -132,10 +158,55 @@ h2, h3{
 .logo {
     text-align: center;
     font-family: 'CantaraGotica', sans-serif;
-    font-size: 50px; 
+    font-size: 60px; 
     background: #f30101; 
     background-clip: text; 
-    color: #a1a1a1;
-    text-shadow: 5px 2px 5px rgb(255, 0, 0); /* Sombra negra suave */
+    color: #dadada;
+    text-shadow: 5px 2px 5px rgb(255, 0, 0); 
 }
 
+.select-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px; 
+}
+
+.select-container label {
+    font-size: 20px; 
+    margin-right: 5px; 
+    color: #dadada;
+     
+}
+
+#categorySelect {
+    width: auto; 
+    padding: 5px; 
+    font-size: 16px; 
+    border: 2px solid #dadada; 
+    border-radius: 8px; 
+    background-color: #dadada; 
+    color: #333; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    
+    
+}
+
+#categorySelect:hover {
+    box-shadow: 0 0 35px rgba(255, 2, 2, 0.911);
+    border-radius: 8px;
+}
+
+#categorySelect:focus {
+    outline: none; 
+    border-radius: 8px;
+    
+}
+
+#categorySelect option:checked {
+    background-color: #ff454545;
+}

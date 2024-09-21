@@ -8,32 +8,61 @@
     <script src="daserjs.js"></script>
     <script src="qrcode.min.js"></script>
     <link href="https://fonts.cdnfonts.com/css/cantara-gotica" rel="stylesheet">
-    <div class="logo">DASER TATTOO</div>
+    <div class="logo">Powerline Tattoo</div>
 </head>
 <br>
 <body>
     <header>
     </header>
-    <div class="container">
-        <div class="description">
+    <div class="gallery">
+        <div class="container">
             <img src="ico/DASER.png" alt="Daser" class="tatuador1">
-            <h3>Damian Cerpa</h3>
-            <p class="description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum corrupti magni accusamus aliquam, odio amet? Laborum inventore animi repellat. Veritatis doloremque debitis fuga quibusdam perferendis totam cupiditat</p>
+            <div class="info">
+                <h3>Damian Cerpa</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum corrupti magni accusamus aliquam, odio amet? Laborum inventore animi repellat. Veritatis doloremque debitis fuga quibusdam perferendis totam cupiditat.</p>
+            </div>
         </div>
-        <div class="description">
+    
+        <div class="container">
             <img src="ico/megan.png" alt="tatuadora" class="tatuador2">
-            <h3>Megan Fox</h3>
-            <p class="description-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quisquam ex, ducimus aut tempora quaerat in repudiandae ullam at commodi, consequatur maxime fuga libero animi officia, officiis aliquam molestias a?</p>
+            <div class="info">
+                <h3>Megan Fox</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quisquam ex, ducimus aut tempora quaerat in repudiandae ullam at commodi, consequatur maxime fuga libero animi officia, officiis aliquam molestias a?</p>
+            </div>
         </div>
     </div>
     <br>
-    <section class="jobs">                               
-        <img src="ico/t1.png">
-        <img src="ico/t2.png">
-        <img src="ico/t3.png">
-        <img src="ico/t4.png">
-        <img src="ico/t5.png">
-        <img src="ico/t6.png">
+    <div class="select-container">
+        <label for="categorySelect">Puedes ver nuestros trabajos en diferentes categorias:</label>
+        <select id="categorySelect" onchange="changeCategory()">
+            <option value="category1">Neo Tradicional</option>
+            <option value="category2">Black and Grey</option>
+            <option value="category3">Realismo</option>
+        </select>
+    </div>
+    <br>
+    <section class="jobs" id="category1">
+        <img src="ico/t1.png" alt="Trabajo 1">
+        <img src="ico/t2.png" alt="Trabajo 2">
+        <img src="ico/t3.png" alt="Trabajo 3">
+        <img src="ico/t4.png" alt="Trabajo 4">
+        <img src="ico/t5.png" alt="Trabajo 5">
+    </section>
+
+    <section class="jobs" id="category2" style="display: none;">
+        <img src="ico/t6.png" alt="Trabajo 6">
+        <img src="ico/t7.png" alt="Trabajo 7">
+        <img src="ico/t8.png" alt="Trabajo 8">
+        <img src="ico/t9.png" alt="Trabajo 9">
+        <img src="ico/t10.png" alt="Trabajo 10">
+    </section>
+
+    <section class="jobs" id="category3" style="display: none;">
+        <img src="ico/t11.png" alt="Trabajo 11">
+        <img src="ico/t12.png" alt="Trabajo 12">
+        <img src="ico/t13.png" alt="Trabajo 13">
+        <img src="ico/t14.png" alt="Trabajo 14">
+        <img src="ico/t15.png" alt="Trabajo 15">
     </section>
     <br>
         <div class="social-media-section">
@@ -57,5 +86,6 @@
         <div class="copy">
             <p>&copy; 2024 <b>Nicolás Cabrera</b> - Todos los Derechos Reservados.</p>
         </div>
+    <script src="daserjs.js"></script>
 </body>
 </html>
