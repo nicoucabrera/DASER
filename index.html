@@ -33,13 +33,13 @@
     </div>
     <br>
     <div class="select-container">
-        <label for="categorySelect">Puedes ver nuestros trabajos en diferentes categorias:</label>
+        <label for="categorySelect"><b>Categorias:</b>:</label>
         <select id="categorySelect" onchange="changeCategory()">
             <option value="category1">Neo Tradicional</option>
             <option value="category2">Black and Grey</option>
             <option value="category3">Realismo</option>
         </select>
-    </div>
+    </div> 
     <br>
     <section class="jobs" id="category1">
         <img src="ico/t1.png" alt="Trabajo 1">
@@ -48,7 +48,7 @@
         <img src="ico/t4.png" alt="Trabajo 4">
         <img src="ico/t5.png" alt="Trabajo 5">
     </section>
-
+    
     <section class="jobs" id="category2" style="display: none;">
         <img src="ico/t6.png" alt="Trabajo 6">
         <img src="ico/t7.png" alt="Trabajo 7">
@@ -56,7 +56,7 @@
         <img src="ico/t9.png" alt="Trabajo 9">
         <img src="ico/t10.png" alt="Trabajo 10">
     </section>
-
+    
     <section class="jobs" id="category3" style="display: none;">
         <img src="ico/t11.png" alt="Trabajo 11">
         <img src="ico/t12.png" alt="Trabajo 12">
@@ -72,9 +72,10 @@
                     <img src="ico/instagram_2111463.png" alt="Instagram"/></a>
             </div>
         </div>
-        <h2>Captura el QR para tener nuestra pagina siempre contigo!</h2>
-        <div id="qrcode"></div>
+        <h2>Compartelo con tus amigos!</h2>
             
+        <div class="qr" id="qrcode"></div>
+
         <script>
             var qrcode = new QRCode(document.getElementById("qrcode"), {
                 text: "https://nicoucabrera.github.io/DASER/", // Cambia este enlace a la URL que quieras
@@ -82,10 +83,11 @@
                 height: 168, // Alto del QR
             });
         </script>
-        <h3></h3>
-        <div class="copy">
-            <p>&copy; 2024 <b>Nicolás Cabrera</b> - Todos los Derechos Reservados.</p>
-        </div>
-    <script src="daserjs.js"></script>
+        <br>
 </body>
+<footer>
+    <div class="copy">
+        <p>&copy; 2024 <b>Nicolás Cabrera</b> - Todos los Derechos Reservados.</p>
+    </div>
+</footer>
 </html>
